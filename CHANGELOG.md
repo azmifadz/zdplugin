@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Add Localizable.strings file
+
 ## 1.0.2
 
 * Zendesk Chat & Support Plugin
