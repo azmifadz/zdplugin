@@ -32,7 +32,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    debugPrint("didChangeAppLifecycleState >>>> " + state.toString());
     if (state == AppLifecycleState.resumed) {
       _flutterPlugin.changeNavStatusAction(false);
     } else {
@@ -108,7 +107,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 RaisedButton(
                   onPressed: () async {
                     await _flutterPlugin.helpCenter().then((value) {
-                      print('object<<<<<<<<<<<<< ' + value.toString());
                     });
                   },
                   child: Text("Help Center"),
@@ -116,7 +114,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 RaisedButton(
                   onPressed: () async {
                     await _flutterPlugin.requestListViewAction().then((value) {
-                      print('object<<<<<<<<<<<<< ' + value.toString());
                     });
                   },
                   child: Text("Request List"),
